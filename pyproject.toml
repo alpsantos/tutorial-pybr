@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Alessandro Santos <alpsantos@gmail.com>"]
 readme = "README.md"
-packages = [{include = "tutorial_pybr"}]
+
 
 [tool.poetry.dependencies]
 python = "^3.10"
