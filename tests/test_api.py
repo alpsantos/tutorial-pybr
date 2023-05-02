@@ -45,9 +45,7 @@ class TestHealthCheck:
 
 
 class TestListarPedidos:
-    def test_quando_identificacao_do_pedido_invalido(
-        self, cliente
-    ):
+    def test_quando_identificacao_do_pedido_invalido(self, cliente):
         resposta = cliente.get("/orders/valor-invalido/items")
         assert resposta.status_code == HTTPStatus.UNPROCESSABLE_ENTITY
 
