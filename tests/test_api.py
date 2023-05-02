@@ -45,7 +45,7 @@ class TestHealthCheck:
 
 
 class TestListarPedidos:
-    def test_quando_identificacao_do_pedido_invalido_um_erro_deve_ser_retornado(
+    def test_quando_identificacao_do_pedido_invalido(
         self, cliente
     ):
         resposta = cliente.get("/orders/valor-invalido/items")
@@ -54,7 +54,7 @@ class TestListarPedidos:
     def test_quando_pedido_nao_encontrado_um_erro_deve_ser_retornado(
         self, cliente, sobreescreve_recuperar_itens_por_pedido
     ):
-        sobreescreve_recuperar_itens_por_pedido(PedidoNaoEncontradoError())  # type: ignore
+        sobreescreve_recuperar_itens_por_pedido(PedidoNaoEncontradoError())
         resposta = cliente.get(
             "/orders/ea78b59b-885d-4e7b-9cd0-d54acadb4933/items"
         )

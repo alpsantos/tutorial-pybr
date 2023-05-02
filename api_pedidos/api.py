@@ -10,7 +10,7 @@ from api_pedidos.excecao import PedidoNaoEncontradoError
 app = FastAPI()
 
 
-def recuperar_itens_por_pedido(identificacao_do_pedido: UUID) -> list[Item]:  # type: ignore
+def recuperar_itens_por_pedido(identificacao_do_pedido: UUID) -> list[Item]:
     pass
 
 
